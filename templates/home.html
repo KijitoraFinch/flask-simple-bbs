@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Home</title>
+    <link rel="stylesheet" href="{{url_for('.static', filename='home.css')}}">
+{% endblock %}
+
+{% block header %}
+<h2>bbs/home</h2>
+    
+{% endblock %}
+
+{% block content %}
+
+        <div class="row">
+            <div class="three columns">
+                <a href="/login" class="button u-full-width ">login/signup</a>
+            </div>
+
+            <div class="three columns">
+                <a href="/enter" class="button u-full-width ">enter to a room</a>
+            </div>
+            <div class="three columns">
+                <a href="/icon" class="button u-full-width ">set the your icon</a>
+            </div>
+
+            <div class="three columns">
+                <a href="/logout" class="button u-full-width ">logout</a>
+            </div>
+        </div>
+    
+{% endblock %}

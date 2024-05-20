@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400&family=M+PLUS+2:wght@100;200;400&display=swap"
+        rel="stylesheet">
+
+
+    <title>制作課題</title>
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='top.css')}}">
+</head>
+
+<body>
+    <div class="summary">
+
+        <h1 class="title">自由製作課題/掲示板実装</h1>
+        <h3 class="borderd-headline">概要</h3>
+        <p>夏休みの制作課題に、プログラミングで掲示板（半分メッセージアプリ）を作ってみました。
+            正直、WEB上で動作させるプログラムを書くのは今回がはじめてなので、デザインなどカスなところも多いですが、今の所の全力を出し切りました。</p>
+        <h3 class="borderd-headline">
+            動機
+        </h3>
+        <p>アルゴリズムを組んでなにかものづくりをする、というテーマに取り組んだ課題が1つくらいあってもいいんじゃないかと思い作ってみた次第です。</p>
+        <p>実際やってみると、論理的な問題（挙動が意図しないものになったり）にぶち当たる確率と、具体的な問題（設定を間違えて起動しないなど）に遭遇する確率が半々くらいだったのですが。</p>
+
+        <h3 class="borderd-headline">技術的解説</h3>
+        <p>このページはプログラムを一行ごとに解説するにはあまりにも余白が少なすぎるので、詳しい説明は私を呼び出してくれたら説明します。 使用技術をざっくり言うと</p>
+        <ul>
+            <li>
+                <p>メイン開発言語：Python(大好き)</p>
+            </li>
+            <li>
+                <p>フレームワーク　(*ざっくりいうと便利ツール集みたいなもの)：Flask</p>
+            </li>
+            <li>
+                <p>ページそのものの構造：HTML(文章の構造)+CSS(デザイン)</p>
+            </li>
+            <li>
+                <p>スタイリング(デザイン)のフレームワーク：skeleton.css, mvp.css</p>
+            </li>
+            <li>
+                <p>開発環境：ArchLinux on ノートPC</p>
+            </li>
+            <li>
+                <p>困ったときの情報収集：Google検索</p>
+            </li>
+            <li>
+                <p>モチベーション：楽しさ</p>
+            </li>
+        </ul>
+
+        <h3 class="borderd-headline">実装後記</h3>
+        <p>作業は大変だったのですが楽しすぎて苦痛は感じませんでした。もっとも、デザインは苦手なのでいい感じにするのに結構苦戦しました。というか、これを先生方が読んでいる今も修正を続けているかもしれません。ワードみたいにマウスでカチャカチャ…ではなく、文字のサイズひとつ変えるだけでCSSを何十文字も書くので手間が限界突破してます
+        </p>
+
+
+        <h3 class="borderd-headline">謝辞</h3>
+        <p>インターネット上に素晴らしき解説記事を書いてくださった名前も知らない皆さん、使用したあらゆる言語とフレームワークの開発者さん。本当にありがとうございます。私のような初心者でもこんなものが作れたのは、先人の積み重ねてきた技術のおかげに他なりません。特に直接触った技術の開発者さん/チーム、コミュニティーだけ名前を書かせていただきます。
+        </p>
+        <p>Python　Guido van Rossum氏</p>
+        <p>Flask　Armin Ronacher氏</p>
+        <p>mvp.css　Andy Brewer氏</p>
+        <p>skelton.css　Dave Gameche氏</p>
+        <p>Linuxカーネル開発リーダー　Linus torvald氏</p>
+        <p>そして絶望的に見た目が汚いサイトに悩んでいた私にskeleton.cssとWebデザインを教えてくれたネッ友,<a href="https://twitter.com/relateduser">s0u7a</a>(そうな)氏にもこの場を借りてお礼します。（安全な範囲内だったら脆弱性検査して遊んでもらっても結構です）</p>
+
+        <a href="/suggest_to_login"><button class="gotoapp">掲示板ページに遷移</button></a>
+
+        <p>多分これからちょくちょくアップデートします。</p>
+    </div>
+</body>
+
+</html>

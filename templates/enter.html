@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>ルームに入室</title>
+<link rel="stylesheet" href="{{url_for('.static', filename='enter.css')}}">
+
+{% endblock %}
+
+{% block header %}
+<div class="container">
+    <h2>bbs/enter</h2>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="section enter_form"></div>
+        <form action="/enter" method="post">
+            <div class="row">
+                <div class="nine columns">
+                    <input type="text" , id="room_name" , name="room_name" placeholder="ルーム名" required
+                        class="u-full-width">
+                </div>
+                <div class="three columns">
+                    <input type="submit">
+                </div>
+            </div>
+        </form>
+        <p>{{ status_message }}</p>
+
+        <a href="/create_new_room">
+            <p>ルームを新規作成</p>
+        </a>
+        <a href="/icon">アイコン登録機能（任意）</a>
+
+    </div>
+</div>
+</body>
+
+{% endblock %}
+
+{% block food %}
+{% endblock %}

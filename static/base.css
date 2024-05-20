@@ -1,0 +1,39 @@
+*{
+    font-family: 'M PLUS 1p', sans-serif;
+    font-family: 'M PLUS 2', sans-serif;
+    font-weight: 375;
+
+
+    }
+
+body{
+    margin-top: 1em;
+    font-weight: 350;
+    }
+
+.container{
+    width: 90%
+    }
+    
+textarea{
+    resize: none;
+    }
+label{
+    font-family: 'M PLUS 1p' sans-serif;
+    font-weight: 400;
+    }
+
+.home-button {
+    display: block;
+    width: 50px; 
+    height: 50px; 
+    line-height: 50px; 
+    text-align: center; 
+    position: fixed;
+    top: 0; 
+    left: 0;
+}
+
+.headline{
+    margin-left: 50px;
+    }

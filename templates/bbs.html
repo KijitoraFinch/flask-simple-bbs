@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>{{ room }}</title>
+
+<link rel="stylesheet" href="{{url_for('.static', filename='bbs.css')}}">
+
+
+<script>
+    // window.onloadイベントに関数を登録
+    window.onload = function () {
+        // 画面下までスクロールする処理
+        window.scrollTo(0, document.body.scrollHeight);
+    };
+</script>
+
+
+{% endblock %}
+
+{% block header %}
+<div class="container">
+    <h2 class="headline">bbs/room/{{room}}:</h2>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="messages">
+        {% for article in articles%}
+        <div class="container">
+            <div class="message-field">
+
+                <div class="row">
+                    <div class="two columns" name="icon"><img src="{{article.icon}}" width="40px" height="40px"></div>
+                    <div class="ten columns post">
+                        <div class="username">
+                            {{ article.name }}
+                        </div>
+                        <div class="message">
+                            {{ article.message | markdown }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+
+        <div class='container postform' id="postform">
+            <form action="/posting" method="post" name="messagepost">
+                <div class="container">
+                    <div class="row">
+                        <div class="twelve columns">
+                            <textarea name="message" required rows="1" class="u-full-width" autofocus></textarea>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var textarea = document.querySelector("textarea[name='message']");
+    textarea.addEventListener("keypress", function (e) {
+        if (e.keyCode == 13) { // Enterキーの場合
+            if (e.shiftKey) { // Shiftキーも押された場合
+                // 何もしない
+            } else { // Enterキーのみ押された場合
+                e.preventDefault(); // デフォルトの動作を防ぐ
+                this.form.submit(); // フォームを送信する
+            }
+        }
+    });
+
+    var textarea = document.querySelector("textarea");
+    textarea.addEventListener("input", function () {
+        this.style.height = "auto";
+        this.style.height = this.scrollHeight + "px";
+    });
+
+
+</script>
+
+
+{% endblock %}

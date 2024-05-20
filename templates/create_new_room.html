@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="container">
+    <h2>bbs/create_new_room</h2>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+<body>
+    <div class="container">
+        <form action="/create_new_room" , method="post">
+            <div class="row">
+                <div class="nine columns">
+                    <input type="text" , placeholder="作成するルーム名" , id="new_room_name" , name="new_room_name"
+                        class="u-full-width">
+                </div>
+                <div class="three columns">
+                    <input type="submit" name="作成" id="create_request">
+                </div>
+            </div>
+            <p>{{ status_message }}</p>
+
+            {% if room_link %}
+            <a href="{{room_link}}">作成した部屋に移動</a>
+
+            {% endif %}
+
+        </form>
+    </div>
+</body>
+{% endblock %}

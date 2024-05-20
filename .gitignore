@@ -1,0 +1,11 @@
+# venv
+venv/
+
+# python cache
+*.pyc
+__pycache__/
+
+# ??
+instance/
+
+backup.py

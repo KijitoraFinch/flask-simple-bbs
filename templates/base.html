@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="{{url_for('.static', filename='base.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400&family=M+PLUS+2:wght@100;200;400&display=swap"
+        rel="stylesheet">
+
+
+    {% block head %}
+    {% endblock %}
+
+</head>
+
+<header>
+    <a href="/home" class="home button">Home</a>
+    {% block header %}
+    {% endblock %}
+</header>
+
+<body>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+
+{% block food %}
+{% endblock %}
+
+</html>
